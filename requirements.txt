@@ -1,0 +1,7 @@
+pytest
+PyYAML
+Jinja2
+setuptools
+jsonschema
+xmltodict
+logging

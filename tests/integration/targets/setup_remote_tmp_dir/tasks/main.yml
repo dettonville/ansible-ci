@@ -1,0 +1,14 @@
+---
+
+####################################################################
+# WARNING: These are designed specifically for Ansible tests       #
+# and should not be used as examples of how to write Ansible roles #
+####################################################################
+
+- name: make sure we have the ansible_os_family and ansible_distribution_version facts
+  setup:
+    gather_subset: distribution
+  when: ansible_facts == {}
+
+- name: "Create temporary directory"
+  ansible.builtin.include_tasks: create-tmpdir.yml
